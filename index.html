@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rani Vintage — Door Palace</title>
+<meta name="description" content="Rani Vintage Door Palace — handcrafted Burma Wood and Chettinad reclaimed wood doors, traditional craftsmanship and timeless designs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#3d4a5e;--navy-dark:#333f4f;--sand:#e5cd9e;--sand-soft:#f0e4c9;--tan:#c9a876;--gold:#b99652;--cream:#fdfbf6;--ink:#2c2c2c;--muted:#7a7468}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  h1,h2,h3,.logo-name{font-family:'Marcellus',serif;font-weight:400;letter-spacing:.5px}
+  img{display:block;max-width:100%}
+  a{text-decoration:none;color:inherit}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+  .kicker{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:13px;font-weight:600}
+
+  /* top bar */
+  .topbar{background:var(--navy-dark);color:#e8e4da;font-size:14px}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;min-height:46px;gap:16px;flex-wrap:wrap}
+  .topbar a{display:inline-flex;align-items:center;gap:8px}
+  .topbar a:hover{color:var(--sand)}
+  .topbar .socials{display:flex;gap:18px}
+  .topbar .group{display:flex;gap:26px;flex-wrap:wrap}
+  @media(max-width:760px){.topbar .socials{display:none}}
+
+  /* header */
+  .navband{background:var(--sand)}
+  .navband .wrap{display:flex;align-items:stretch;justify-content:space-between;min-height:84px}
+  .brandbox{background:transparent;padding:8px 0;display:flex;align-items:center;gap:14px;box-shadow:none}
+  .nav-logo-image{width:62px;height:62px;flex:none;border-radius:50%;object-fit:cover;border:2px solid var(--gold);background:#fff}
+  .logo-name{font-size:27px;color:var(--ink);line-height:1}
+  .logo-sub{font-size:11.5px;letter-spacing:2.5px;color:var(--muted);text-transform:uppercase}
+  nav{display:flex;align-items:center;gap:34px}
+  nav a{color:var(--navy-dark);font-weight:500;font-size:16.5px;padding:6px 0;border-bottom:2px solid transparent}
+  nav a:hover,nav a.active{border-bottom-color:var(--navy-dark)}
+  @media(max-width:900px){nav{gap:18px}.brandbox{padding:8px 0}.logo-name{font-size:22px}nav a{font-size:14.5px}}
+  @media(max-width:640px){
+    .navband .wrap{flex-direction:column;padding:10px 24px 16px}
+    .brandbox{justify-content:center}
+    nav{flex-wrap:wrap;justify-content:center;gap:14px 20px;padding-top:10px}
+  }
+
+  /* hero — soft light wood texture background, dark readable text */
+  .hero{position:relative;display:flex;align-items:center;justify-content:center;min-height:86vh;padding:90px 20px;text-align:center;color:var(--navy-dark);
+    background:linear-gradient(rgba(240,228,201,.68),rgba(240,228,201,.78)),url('images/hero-bg.jpg') center/cover no-repeat}
+  .hero .wrap{width:100%;padding:0}
+  .hero-inner{max-width:820px;margin:0 auto;padding:0}
+  .hero .kicker{color:#8f6f2f}
+  .hero h1{font-size:clamp(34px,5vw,62px);line-height:1.1;margin:16px 0 20px;color:var(--navy-dark)}
+  .hero p{font-size:18px;font-weight:500;color:#3a362f;margin:0 auto 32px;max-width:660px}
+  .btn{display:inline-block;padding:15px 38px;font-family:'Jost',sans-serif;font-size:15px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:.25s;border:none}
+  .btn-sand{background:var(--navy-dark);color:#fff}
+  .btn-sand:hover{background:var(--gold);color:#fff}
+  @media(max-width:560px){.hero{min-height:78vh;padding:60px 18px}.hero p{font-size:16px}}
+
+  /* about */
+  section{padding:96px 0}
+  .about{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:center}
+  .about-img{width:100%;max-width:550px;margin:0 auto;padding:20px;border:2px solid var(--sand);border-radius:6px;background:var(--cream)}
+  .about-img img{width:100%;height:auto;border-radius:6px;box-shadow:0 24px 60px rgba(61,74,94,.22)}
+  .about h2{font-size:clamp(30px,3.6vw,44px);margin:14px 0 22px;line-height:1.15}
+  .about p{color:var(--muted);margin-bottom:18px}
+  .stats{display:flex;gap:44px;margin-top:36px;flex-wrap:wrap}
+  .stats b{font-family:'Marcellus',serif;font-size:38px;color:var(--navy);display:block;line-height:1}
+  .stats span{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+  @media(max-width:880px){.about{grid-template-columns:1fr;gap:56px}.about-img{max-width:520px}}
+  @media(max-width:560px){.about-img{padding:14px}}
+
+  /* products — all 3 cards same size */
+  .products{background:var(--sand-soft)}
+  .section-head{text-align:center;max-width:640px;margin:0 auto 56px}
+  .section-head h2{font-size:clamp(30px,3.6vw,44px);margin:12px 0 16px}
+  .section-head p{color:var(--muted)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;align-items:stretch}
+  .card{display:flex;flex-direction:column;background:var(--cream);border-radius:6px;overflow:hidden;box-shadow:0 10px 30px rgba(61,74,94,.1);transition:transform .3s,box-shadow .3s}
+  .card:hover{transform:translateY(-8px);box-shadow:0 24px 50px rgba(61,74,94,.18)}
+  .card-image{width:100%;aspect-ratio:3/4;overflow:hidden;background:#e9dfca}
+  .card-image img{width:100%;height:100%;object-fit:cover;object-position:center}
+  .card-body{padding:24px 26px 30px;flex:1}
+  .card h3{font-size:22px;margin-bottom:8px}
+  .card p{color:var(--muted);font-size:15px}
+  @media(max-width:880px){.grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:600px){.grid{grid-template-columns:1fr}}
+
+  /* craft */
+  .craft{background:var(--navy);color:#ece8df;margin-bottom:80px}
+  .craft .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;text-align:center}
+  .craft .icon{width:64px;height:64px;margin:0 auto 20px;border:1.5px solid var(--sand);border-radius:50%;display:flex;align-items:center;justify-content:center}
+  .craft .icon svg{width:28px;height:28px;stroke:var(--sand)}
+  .craft h3{color:#fff;font-size:20px;margin-bottom:10px}
+  .craft p{font-size:14.5px;color:#c6c0b4}
+  @media(max-width:880px){.craft .wrap{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.craft .wrap{grid-template-columns:1fr}}
+
+  /* contact */
+  .contact{display:grid;grid-template-columns:400px 1fr;box-shadow:0 30px 70px rgba(61,74,94,.16);border-radius:6px;overflow:hidden}
+  .contact-panel{background:var(--navy);color:#fff;padding:60px 46px}
+  .contact-panel .kicker{color:var(--sand)}
+  .contact-panel h2{font-size:38px;margin:14px 0 22px;line-height:1.15}
+  .contact-panel p{color:#c6c0b4;font-size:15px}
+  .contact-info{margin-top:36px;display:grid;gap:20px;font-size:15px}
+  .contact-info b{color:var(--sand);display:block;letter-spacing:1px;text-transform:uppercase;font-size:12px;margin-bottom:4px}
+  .wa-box{background:var(--cream);padding:60px 50px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+  .wa-box h3{font-size:30px;margin-bottom:16px;color:var(--navy-dark)}
+  .wa-box p{color:var(--muted);font-size:17px;max-width:460px;margin-bottom:34px}
+  .wa-btn{border:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:#25D366;box-shadow:0 6px 16px rgba(37,211,102,.4);transition:transform .25s}
+  .wa-btn:hover{transform:scale(1.12)}
+  .wa-btn svg{width:26px;height:26px;fill:#fff}
+  .wa-box textarea{max-width:460px;min-height:110px;margin-bottom:22px}
+  .wa-label{margin-top:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;font-size:13px;color:var(--navy-dark)}
+  @media(max-width:900px){.contact{grid-template-columns:1fr}.wa-box{padding:46px 26px}}
+
+  /* footer */
+  footer{background:var(--navy-dark);color:#e4dfd3;padding:70px 0 0;font-size:15.5px}
+  .foot-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:80px;row-gap:44px;align-items:start;padding-bottom:64px}
+  .foot-contact a{overflow-wrap:anywhere}
+  .foot-logo{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+  .foot-logo img{width:78px;height:78px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);background:#fff}
+  .foot-logo .logo-name{color:#fff;font-size:30px}
+  .foot-logo .logo-sub{color:var(--sand)}
+  .foot-tag{font-weight:600;color:#fff;margin-bottom:6px}
+  .foot-about p{color:#c6c0b4}
+  .foot-social{display:flex;gap:12px;margin-top:26px}
+  .foot-social a{width:36px;height:36px;border-radius:4px;display:flex;align-items:center;justify-content:center;transition:.25s}
+  .foot-social a:hover{transform:translateY(-3px)}
+  .foot-social svg{width:20px;height:20px;fill:#fff}
+  .fb{background:#4267b2}.ig{background:#e1306c}
+  footer h3{font-size:28px;color:#fff;margin-bottom:24px}
+  .foot-contact div{margin-bottom:16px;color:#e4dfd3}
+  .foot-contact b{display:block;font-weight:500;color:var(--sand)}
+  .foot-contact a:hover{color:var(--sand)}
+  .foot-map{border-radius:4px;overflow:hidden;border:2px solid rgba(229,205,158,.5)}
+  .foot-map iframe{display:block;width:100%;height:300px;border:0}
+  .open-map{display:inline-block;margin-top:12px;color:var(--sand);font-weight:500;letter-spacing:1px;text-transform:uppercase;font-size:13px}
+  .open-map:hover{color:#fff}
+  .copyright{border-top:1px solid rgba(255,255,255,.12);text-align:center;padding:22px 24px;color:#b8b2a6;font-size:14px}
+  @media(max-width:1000px){.foot-grid{column-gap:44px}}
+  @media(max-width:860px){.foot-grid{grid-template-columns:1fr;row-gap:44px}}
+
+  /* floating whatsapp */
+  .wa-float{position:fixed;right:22px;bottom:22px;z-index:99;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.3);transition:transform .25s}
+  .wa-float:hover{transform:scale(1.1)}
+  .wa-float svg{width:34px;height:34px;fill:#fff}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="group">
+      <a href="#contact">&#128205; 514,VOC Road, kalanivasal, Karaikudi</a>
+      <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ranivintagedoorpalace@gmail.com" target="_blank" rel="noopener">&#9993; ranivintagedoorpalace@gmail.com</a>
+    </div>
+    <div class="socials">
+      <a href="#" aria-label="Facebook">Facebook</a>
+      <a href="#" aria-label="Instagram">Instagram</a>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="navband">
+    <div class="wrap">
+      <div class="brandbox">
+        <img class="nav-logo-image" src="images/logo.jpeg" alt="Rani Vintage Door Palace logo">
+        <div>
+          <div class="logo-name">Rani</div>
+          <div class="logo-sub">Vintage Door Palace</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#collection">Collection</a>
+        <a href="#craft">Craft</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="kicker">Handcrafted Since 2000</div>
+      <h1>Heritage Wood &amp; Timeless Designs</h1>
+      <p>Burma Wood &amp; reclaimed Wood — Crafting distinctive wooden doors and timeless woodwork with the character of authentic timber and the beauty of traditional craftsmanship.</p>
+      <a href="#collection" class="btn btn-sand">View Collection</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div class="about-img">
+      <img src="images/door1.jpeg" alt="Vintage Wooden Door" loading="lazy">
+    </div>
+    <div>
+      <div class="kicker">About Us</div>
+      <h2>Where Every Grain Holds a Royal Legacy.</h2>
+      <p>Rani Vintage Door Palace is a traditional Chettinad door makers hub from Karaikudi. We specialize in antique temple doors, sourced from aged solid teak wood and carved entirely by hand — no MDF, no duplicate wood, no shortcuts.
+From a single main door to a grand palace entrance, each door is built to order, carved with divine stories, sized to your home, and built to last for generations.</p>
+      <div class="stats">
+        <div><b>25+</b><span>Years of Craft</span></div>
+        <div><b>4,800</b><span>Pieces Delivered</span></div>
+        <div><b>100%</b><span>Solid Wood</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="collection">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Our Collection</div>
+      <h2>Pieces Ready for Your Home</h2>
+      <p>Best-loved designs from the workshop — available now, or customised to your measurements and finish.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="card-image"><img src="images/door3.jpeg" alt="Luxury Teak Main Door" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Luxury Teak Main Door</h3>
+          <p>Teak wood door with iron side grill, royal carving &amp; brass handle - for villa entrance.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image"><img src="images/door4.jpeg" alt="Heritage Temple Double Door" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Heritage Temple Double Door</h3>
+          <p>Solid teak double door with deity carving &amp; temple frame.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-image"><img src="images/door5.jpeg" alt="Royal Gaja Lakshmi Pooja Door" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Royal Gaja Lakshmi Pooja Door</h3>
+          <p>Solid Teak Wood Double Door with Gaja Lakshmi Thoranam, Lotus Panels &amp; 14 Brass Bells. Divine carving for Pooja Room &amp; Main Entrance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="craft" id="craft">
+  <div class="wrap">
+    <div>
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg></div>
+      <h3>Master Craftsmanship</h3>
+      <p>Every joint cut and finished by carpenters with decades at the bench.</p>
+    </div>
+    <div>
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 22c4-3 8-6.5 8-11a8 8 0 10-16 0c0 4.5 4 8 8 11z"/><circle cx="12" cy="11" r="3"/></svg></div>
+      <h3>Sustainable Wood</h3>
+      <p>Certified plantation hardwood only — one tree planted for every piece.</p>
+    </div>
+    <div>
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></div>
+      <h3>Custom Sizing</h3>
+      <p>Made to your measurements, wood choice and finish — no extra wait.</p>
+    </div>
+    <div>
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M20 6L9 17l-5-5"/></svg></div>
+      <h3>Lifetime Guarantee</h3>
+      <p>Free restoration and refinishing for as long as you own the piece.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap foot-grid">
+    <div class="foot-about">
+      <div class="foot-logo">
+        <img src="images/logo.jpeg" alt="Rani Vintage Door Palace logo">
+        <div><div class="logo-name">Rani</div><div class="logo-sub">Vintage Door Palace</div></div>
+      </div>
+      <div class="foot-tag">Heritage Wood, Timeless Doors.</div>
+      <p>Handcrafted Chettinad teak doors from Karaikudi — carved by hand, built to order and made to last for generations.</p>
+      <div class="foot-social">
+        <a class="fb" href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8V6.5c0-.7.2-1 1.1-1H17V2h-2.6C11.4 2 10 3.7 10 6.2V8H8v3.5h2V22h4V11.5h2.8L17 8z"/></svg></a>
+        <a class="ig" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3.5A4.5 4.5 0 1112 16.5 4.5 4.5 0 0112 7.5zm0 2A2.5 2.5 0 1012 14.5 2.5 2.5 0 0012 9.5zM17.2 5.8a1.1 1.1 0 110 2.2 1.1 1.1 0 010-2.2z"/></svg></a>
+      </div>
+    </div>
+    <div class="foot-contact">
+      <h3>Contact Us</h3>
+      <div><b>Email :</b><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ranivintagedoorpalace@gmail.com" target="_blank" rel="noopener">ranivintagedoorpalace@gmail.com</a></div>
+      <div><b>Mobile :</b><a href="tel:+919845012345">+91 98450 12345</a></div>
+      <div><b>Address :</b>514, VOC Road, Kalanivasal,<br>Karaikudi, Tamil Nadu</div>
+      <div><b>Open Hours :</b>Mon – Sat, 10 am – 7 pm</div>
+    </div>
+    <div>
+      <div class="foot-map">
+        <iframe src="https://www.google.com/maps?q=Rani+Vintage+Door+Palace+514+VOC+Road+Kalanivasal+Karaikudi&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Rani Vintage Door Palace location"></iframe>
+      </div>
+      <a class="open-map" href="https://goo.gl/maps/JDtLTeetXXgPM2Xt8" target="_blank" rel="noopener">Open in Google Maps &#8599;</a>
+    </div>
+  </div>
+  <div class="copyright">&copy; 2026 Rani Vintage Door Palace. Handcrafted with love. All rights reserved.</div>
+</footer>
+
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.9 11.9 0 0012.04 0C5.46 0 .1 5.36.1 11.94c0 2.1.55 4.15 1.6 5.96L0 24l6.28-1.65a11.9 11.9 0 005.76 1.47h.01c6.58 0 11.94-5.36 11.94-11.94 0-3.19-1.24-6.19-3.47-8.4zM12.05 21.8h-.01a9.9 9.9 0 01-5.04-1.38l-.36-.21-3.73.98 1-3.64-.24-.37a9.87 9.87 0 01-1.51-5.24c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.12 1.03 6.99 2.9a9.8 9.8 0 012.9 7c0 5.45-4.44 9.85-9.9 9.85zm5.43-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg></a>
+
+<script>
+  // Change this to your real WhatsApp number: country code + number, no + or spaces
+  var WA_NUMBER = "919845012345";
+  var WA_DEFAULT = "Have questions about our handcrafted furniture or custom doors? Our design experts are here to help you. We usually respond within 24 hours.";
+  document.getElementById("waFloat").href = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(WA_DEFAULT);
+  function sendWhatsApp(){
+    var t = document.getElementById("waMsg").value.trim() || WA_DEFAULT;
+    window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(t), "_blank");
+  }
+</script>
+</body>
+</html>
